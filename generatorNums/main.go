@@ -18,7 +18,7 @@ func randNumsGenerator(n int) <-chan int {
 	out := make(chan int)
 	go func() {
 		for i := 0; i < n; i++ {
-			out <- r.Intn(n)
+			out <- r.Intn(10)
 		}
 		close(out)
 	}()
