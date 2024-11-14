@@ -2,22 +2,6 @@ package main
 
 import "fmt"
 
-// func main() {
-
-// 	ch := make(chan int, 1)
-
-// 	go func() {
-
-// 		<-ch
-// 		fmt.Println("go")
-
-// 	}()
-
-// 	ch <- 100
-// 	fmt.Println("main")
-
-// }
-
 func main() {
 
 	noBuf()
