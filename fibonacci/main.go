@@ -33,6 +33,7 @@ func fibonacci(ch chan<- int, quit <-chan struct{}) {
 		case <-quit:
 			return
 		}
+
 	}
 
 }
