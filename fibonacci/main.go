@@ -1,26 +1,38 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(fibonacci(8))
+	ch := make(chan int)
+	q := make(chan struct{})
 
+	go func() {
+
+		for i := 0; i < 10; i++ {
+			fmt.Println(<-ch)
+		}
+
+		q <- struct{}{}
+
+	}()
+
+	fibonacci(ch, q)
 }
 
-func fibonacci(num int) int {
+func fibonacci(ch chan<- int, quit <-chan struct{}) {
 
-	x := 0
+	x, y := 0, 1
 
-	y := 1
+	defer close(ch)
 
-	for i := 0; i < num; i++ {
+	for {
+		select {
+		case ch <- x:
+			x, y = y, x+y
 
-		x, y = y, x+y
-
+		case <-quit:
+			return
+		}
 	}
-
-	return y - x
 
 }
