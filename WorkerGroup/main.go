@@ -13,6 +13,7 @@ func main() {
 
 	jobs := make(chan func())
 
+	// wg := &sync.WaitGroup{}
 	var wg sync.WaitGroup
 
 	for i := 0; i < numWorker; i++ {
