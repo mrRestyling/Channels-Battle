@@ -29,11 +29,8 @@ func fibonacci(ch chan<- int, quit <-chan struct{}) {
 		select {
 		case ch <- x:
 			x, y = y, x+y
-
 		case <-quit:
 			return
 		}
-
 	}
-
 }
