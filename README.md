@@ -1,4 +1,4 @@
-# Channels Battle1
+# Channels Battle
 
 
 - ### Fibonacci
