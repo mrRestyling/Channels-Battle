@@ -1,12 +1,14 @@
 # Channels Battle
 
+![alt text](states.png)
+
 
 - ### Fibonacci
 
 Числа фибоначи
 
 - ### GeneratorNums
-
+ 
 Генератор случайных чисел с использованием канала
 
 - ### ReadTwoChan
