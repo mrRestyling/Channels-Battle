@@ -3,6 +3,10 @@
 ![alt text](states.png)
 
 
+- ### 1_STATES
+
+Реализация состояний
+
 - ### Fibonacci
 
 Числа фибоначи
