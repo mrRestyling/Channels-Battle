@@ -17,4 +17,4 @@ func main() {
 
 }
 
-// Пул воркеров https://habr.com/ru/articles/490336/
+
