@@ -36,6 +36,6 @@ func sqrWorker(tasks <-chan int, results chan<- int, id int) {
 	for num := range tasks {
 		time.Sleep(time.Millisecond)
 		fmt.Printf("[worker %v] Sending result by worker %v\n", id, id)
-		results <- num * num
+		results <- num * num * num
 	}
 }
