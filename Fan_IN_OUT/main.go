@@ -7,13 +7,10 @@ import (
 
 func main() {
 
-	// t := time.Now()
 	chanInputNums := getInputChan()
 
 	chanOptSqr1 := getSquareChan(chanInputNums)
 	chanOptSqr2 := getSquareChan(chanInputNums)
-	// fmt.Println(<-chanOptSqr1)
-	// fmt.Println(<-chanOptSqr2)
 
 	chanMergedSqr := merge(chanOptSqr1, chanOptSqr2)
 
@@ -24,7 +21,6 @@ func main() {
 	}
 
 	fmt.Println("Sum of squares between 0-9 is", sqrSum)
-
 }
 
 func getInputChan() <-chan int {
