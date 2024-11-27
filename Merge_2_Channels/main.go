@@ -1,19 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
 // Функция func Merge(f func(int) int, in1 <-chan int, in2 <-chan int, out chan <- int, n int)
 
 func main() {
 
-	t := time.Now()
-
 	merge2Channels(func(x int) int { return x * x }, make(chan int), make(chan int), make(chan int), 10)
-
-	fmt.Println(time.Since(t))
 
 }
 
@@ -33,6 +24,7 @@ func merge2Channels(fn func(int) int, in1 <-chan int, in2 <-chan int, out chan<-
 			ch1 <- t{i: num, n: fn(x1)}
 		}(i)
 	}
+
 	for i := 0; i < n; i++ {
 		go func(num int) {
 			x2 := <-in2
