@@ -12,8 +12,6 @@ func main() {
 
 	c := make(chan string, 3)
 
-	
-
 	for i := 0; i < 5; i++ {
 
 		wg.Add(1)
@@ -33,5 +31,4 @@ func main() {
 	for n := range c {
 		fmt.Println(n)
 	}
-
 }
