@@ -1,4 +1,4 @@
-# Channels Battle!
+# Channels Battle
 
 ![alt text](states.png)
 
